@@ -238,7 +238,7 @@ elif page == "events":
 elif page == "event_detail":
     eid = st.session_state.active_event
     if eid:
-        from pages.event_detail import show; show(eid)
+        from pages.event_detail import show; show(eid, user)
     else:
         st.session_state.page = "events"; st.rerun()
 
