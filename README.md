@@ -1,96 +1,296 @@
-# EventLedger AI
+🎉 EventLedger AI
+Enterprise Event ERP & Financial Intelligence Platform
 
-**Event Financial Lifecycle Management Platform**
 
----
 
-## Quick Start (Windows)
 
-### Step 1 — Install Python
-Download and install **Python 3.10+** from https://python.org  
-✅ **Important:** During installation, check **"Add Python to PATH"**
 
-### Step 2 — Install dependencies
-Double-click **`setup.bat`**  
-*(Only needed once)*
 
-### Step 3 — Run the app
-Double-click **`run.bat`**  
-Then open your browser at **http://localhost:8501**
 
----
 
-## Manual Run (Command Prompt / PowerShell)
+🌐 Live Demo: https://eventledger-ai.streamlit.app/
 
-```bat
-cd "C:\Users\Soham\Pictures\SMT CHM\Projects\eventledger.AI\eventledger"
-pip install -r requirements.txt
-streamlit run app.py
-```
+📖 Overview
 
----
+EventLedger AI is a modern Enterprise Event ERP (Enterprise Resource Planning) platform developed to streamline the complete lifecycle of event planning, budgeting, financial tracking, approvals, reporting, and analytics.
 
-## Demo Login
-| Field    | Value                    |
-|----------|--------------------------|
-| Email    | demo@eventledger.ai      |
-| Password | demo123                  |
+Designed for colleges, universities, clubs, NGOs, event management teams, and organizations, the platform provides secure multi-user collaboration with role-based access control, departmental budgeting, financial intelligence, and executive reporting.
 
----
+Unlike conventional event management systems, EventLedger AI focuses on financial governance, operational transparency, workflow automation, and decision support throughout the planning and execution of an event.
 
-## Project Structure
+✨ Key Features
+🎯 Event Management
+Create and manage multiple events
+Planning & execution workspaces
+Department-wise organization
+Event lifecycle management
+Event dashboards
+👥 Multi-User Collaboration
+Secure authentication
+Event-level role assignments
+Multi-user collaboration
+Permission-based dashboards
+Live synchronized workspace
+🔐 Role-Based Access Control
 
-```
-eventledger/
+Five user roles are supported:
+
+👑 Super Admin
+📋 Event Admin
+💰 Finance Head
+🏢 Department Head
+👤 Member
+
+Permissions are assigned per event, allowing users to hold different responsibilities across different events.
+
+💰 Budget Planning & Approval
+
+EventLedger AI provides a structured budgeting workflow.
+
+Planning Stage
+Department cost centers
+Estimated income
+Estimated expenses
+Line-item budgeting
+Quantity & unit costing
+Budget Workflow
+Draft proposals
+Submit for approval
+Finance review
+Super Admin approval
+Rejection with mandatory reason
+Budget version history
+
+Self-approval is prevented to ensure financial governance.
+
+📊 Financial Management
+
+The platform separates Estimated and Actual financial data.
+
+Income
+Estimated Income
+Actual Income
+Payment mode tracking
+Reference numbers
+Revenue monitoring
+Expenses
+Estimated Expenses
+Actual Expenses
+Department allocation
+Expense monitoring
+🤝 Sponsor Management
+
+Manage sponsors with:
+
+Sponsor profiles
+Sponsorship tiers
+Contact information
+Contribution amount
+
+Sponsor contributions automatically synchronize into Actual Income.
+
+🏢 Vendor Management
+
+Track vendors with:
+
+Vendor information
+Contract details
+Contact information
+Payment records
+
+Vendor entries automatically generate matching Actual Expense records.
+
+📈 Analytics Dashboard
+
+Interactive analytics include:
+
+Budget Accuracy
+Revenue Analysis
+Expense Distribution
+Department Spending
+Profit & Loss
+Variance Analysis
+Operational Health Score
+Plotly Interactive Charts
+📄 Reports & Export
+
+Generate professional reports including:
+
+PDF Reports
+Executive Summary
+Income Statement
+Expense Statement
+Profit & Loss
+Excel Reports
+Summary
+Departments
+Income
+Expenses
+Sponsors
+Vendors
+CSV Export
+
+Export individual datasets including:
+
+Income
+Expenses
+Sponsors
+Vendors
+📥 Excel Import
+
+Supports bulk data import through Excel.
+
+Features include:
+
+Downloadable templates
+Department validation
+Amount validation
+Import preview
+Error reporting
+Event-specific imports
+🔔 Live Notifications
+Sidebar notification badge
+Toast notifications
+Live activity updates
+Auto-refresh dashboard
+Real-time polling
+📜 Audit Logging
+
+Every important action is recorded.
+
+Examples include:
+
+User creation
+Event creation
+Budget submission
+Budget approval
+Budget rejection
+Role assignment
+Password reset
+
+All timestamps are displayed in Indian Standard Time (IST).
+
+💾 Backup & Restore
+
+Available to Super Admins.
+
+Features include:
+
+Complete database backup
+JSON export
+Restore preview
+Confirmation before restore
+Automatic ID sequence reset
+✉️ Email Integration
+
+Built-in email functionality supports:
+
+Account-related communication
+Password reset operations
+System notifications
+🎨 Modern User Experience
+
+EventLedger AI features a fully customized interface including:
+
+Glossy Electric Dark Theme
+Animated splash screen
+Gradient typography
+Neon UI accents
+Glassmorphism-inspired cards
+Custom HTML/CSS/JavaScript animations
+Responsive layouts
+⚡ Live Collaboration
+
+The application uses automatic polling to refresh selected components without requiring manual page reloads.
+
+Features include:
+
+Live event overview updates
+Live notification updates
+Background refresh every few seconds
+Seamless multi-user collaboration
+🏗️ Technology Stack
+Frontend
+Streamlit
+HTML
+CSS
+JavaScript
+Backend
+Python
+Database
+PostgreSQL
+Supabase
+Data Analysis
+Pandas
+NumPy
+Visualization
+Plotly
+Reports
+ReportLab
+OpenPyXL
+Authentication
+SHA-256 Password Hashing
+Deployment
+Streamlit Community Cloud
+📂 Project Structure
+EventLedger-AI/
 │
-├── app.py                   ← Main entry point (run this)
-├── requirements.txt         ← Python dependencies
-├── run.bat                  ← Windows quick-start
-├── setup.bat                ← Windows first-time setup
-│
+├── app.py
 ├── database/
-│   └── schema.py            ← SQLite schema + demo data
-│
-├── utils/
-│   ├── helpers.py           ← All DB read/write functions
-│   ├── styles.py            ← CSS design system
-│   ├── charts.py            ← Plotly chart builders
-│   └── export_engine.py     ← PDF (ReportLab) + Excel (OpenPyXL)
-│
+├── pages/
 ├── components/
-│   └── ui.py                ← Sidebar, KPI cards, shared widgets
-│
-└── pages/
-    ├── auth.py                      ← Login & registration
-    ├── dashboard.py                 ← Portfolio overview
-    ├── events.py                    ← Event list & create
-    ├── event_detail.py              ← Full lifecycle tabs
-    ├── finance_sponsors_vendors.py  ← Global finance views
-    ├── analytics.py                 ← Cross-event analytics
-    ├── ai_insights.py               ← AI alerts & forecasting
-    └── reports_archive_settings.py ← Reports + PDF/Excel export
-```
+├── utils/
+├── assets/
+├── .streamlit/
+├── requirements.txt
+├── README.md
+└── LICENSE
+🔒 Security Features
+Role-Based Access Control (RBAC)
+Event-level permissions
+Department-level access restrictions
+Secure password hashing
+Budget approval workflow
+Self-approval prevention
+Audit logging
+Protected administrative operations
+🌍 Live Application
 
----
+🔗 Application: https://eventledger-ai.streamlit.app/
 
-## Troubleshooting
+👨‍💻 Developer
+Soham Morye
 
-| Problem | Fix |
-|---------|-----|
-| `'streamlit' is not recognized` | Run `setup.bat` first, or `pip install streamlit` |
-| `ModuleNotFoundError` | Run `pip install -r requirements.txt` |
-| Browser doesn't open | Manually visit http://localhost:8501 |
-| Port 8501 in use | Edit `run.bat`, change `--server.port 8501` to `8502` |
-| Blank white screen | Hard refresh browser: `Ctrl + Shift + R` |
+Data Analytics & Full-Stack Developer
 
----
+EventLedger AI was independently designed and developed as a portfolio project to demonstrate practical software engineering skills in enterprise application development, workflow automation, financial management, analytics, cloud deployment, and modern user interface design.
 
-## Phases Implemented
-- ✅ Phase 1 – Foundation (Auth, Dashboard, Events, Departments)
-- ✅ Phase 2 – Planning (Estimated Budget, Income, Expenses)
-- ✅ Phase 3 – Execution (Actual Income, Expenses, Sponsors, Vendors)
-- ✅ Phase 4 – Comparison (Variance Analysis, Health Score)
-- ✅ Phase 5 – Analytics (Charts, KPIs, Rankings)
-- ✅ Phase 6 – Reports (PDF & Excel Export, 7 report types)
-- ✅ Phase 7 – AI Insights (Alerts, Recommendations, Forecasting)
-- ✅ Phase 8 – Administration (Archive, Settings, Password Change)
+The project showcases expertise in:
+
+Enterprise Application Development
+Python Programming
+PostgreSQL Database Design
+Streamlit Development
+Financial Workflow Automation
+Data Analytics
+Interactive Dashboard Design
+Report Generation
+Cloud Deployment
+Role-Based Access Control (RBAC)
+🚀 Future Roadmap
+AI Budget Recommendations
+Predictive Financial Analytics
+Intelligent Spending Alerts
+Advanced Executive Dashboards
+Mobile UI Enhancements
+Enhanced Collaboration Features
+Performance Optimizations
+📜 License
+
+This project has been developed for portfolio, educational, and demonstration purposes.
+
+© 2026 Soham Morye. All rights reserved.
+
+⭐ Support
+
+If you found this project interesting, consider giving it a ⭐ Star on GitHub.
