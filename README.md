@@ -8,7 +8,7 @@ Enterprise Event ERP & Financial Intelligence Platform
 
 
 
-🌐 Live Demo: https://eventledger-ai.streamlit.app/
+🌐 Live Demo: https://huggingface.co/spaces/Sohammorye/eventledger-ai
 
 📖 Overview
 
